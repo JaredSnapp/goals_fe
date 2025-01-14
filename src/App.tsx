@@ -1,11 +1,17 @@
+import HeaderBar from "./pages/headerBar"
+import GoalsList from "./pages/goalsList"
+import { RecruiterCard } from "./pages/recruiterCard"
+import { RecruiterModel } from "./models/models"
+import { RecruiterList } from "./pages/recruiterList"
 
 function App() {
+    
 
   return (
     <>
-      <div>
-        <h1>Goals Frontend App</h1>
-       </div>
+    <HeaderBar />
+    <GoalsList />
+    <RecruiterList />
     </>
   )
 }
