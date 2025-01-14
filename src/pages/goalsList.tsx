@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { Button } from "../components/Button";
-import useAxios from "../hooks/useApi";
 import { GoalCard } from "./goalCard";
-import { GoalModel } from "../models/models";
+import { useGoalApi } from "../hooks/useApi";
+
+
+const {fetch: usefetch} = useGoalApi;
 
 export default function GoalsList() {
-  // const { fetch: fetchGoals } = useApi("goal");
-  const { response, loading, error } = useAxios<GoalModel[]>("goal");
-
+  const { response, loading, error } = usefetch();
 
   useEffect(() => {
     console.log(response);

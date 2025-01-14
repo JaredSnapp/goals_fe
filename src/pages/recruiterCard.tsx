@@ -10,12 +10,12 @@ export function RecruiterCard({ recruiter }: RecruiterCardProps) {
 
   useEffect(() => {
     // calculate days since last contact
-    if (recruiter.lastContactDate) {
+    if (recruiter.last_contact) {
       const millisecondsInDay: number = 1000 * 60 * 60 * 24;
 
     
-      console.log(recruiter.lastContactDate)
-      let lastContact = new Date(recruiter.lastContactDate)
+      console.log(recruiter.last_contact)
+      let lastContact = new Date(recruiter.last_contact)
       const today = new Date()
 
       let diff = today.valueOf() - lastContact.valueOf()

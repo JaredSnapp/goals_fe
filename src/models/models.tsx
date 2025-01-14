@@ -13,6 +13,6 @@ export type RecruiterModel = {
     id: string,
     name: string,
     company: string,
-    lastContactDate: string,
+    last_contact: string,
     status: string,
 }
