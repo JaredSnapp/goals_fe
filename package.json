@@ -12,9 +12,12 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
+    "quill": "^2.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind": "^4.0.0",
+    "react-hook-form": "^7.54.2",
+    "react-quill": "^2.0.0",
+    "tailwind": "^2.3.1",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {

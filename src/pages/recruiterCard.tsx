@@ -2,10 +2,11 @@ import { RecruiterModel } from "../models/models";
 import { useEffect, useState } from "react";
 
 interface RecruiterCardProps {
+  onClick?: (recruiter: RecruiterModel) => void;
   recruiter: RecruiterModel;
 }
 
-export function RecruiterCard({ recruiter }: RecruiterCardProps) {
+export function RecruiterCard({ recruiter, onClick }: RecruiterCardProps) {
   const [days, setDays] = useState(0);
 
   useEffect(() => {
@@ -25,10 +26,16 @@ export function RecruiterCard({ recruiter }: RecruiterCardProps) {
     }
   }, [recruiter]);
 
+  const click = () => {
+    if (onClick) {
+      onClick(recruiter);
+    }
+  }
+
   // min-w-72 max-w-96
   return (
     <>
-      <div className={"flex bg-white border min-w-72 max-w-96 rounded-xl w-100 cursor-pointer"}>
+      <div className={"flex bg-white border min-w-72 max-w-96 rounded-xl w-100 cursor-pointer"} onClick={click}>
         <div className={`${days > 7 ? 'bg-red' : 'bg-green'} w-2 rounded-tl-xl rounded-bl-xl`}></div>
         <div className={"p-2 px-3 w-full"}>
           <div className={"flex justify-between"}>

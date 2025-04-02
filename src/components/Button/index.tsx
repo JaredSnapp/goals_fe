@@ -1,18 +1,20 @@
-import { ReactNode } from "react";
 
-
-interface ButtonProps {
-    onClick?: () => void;
-    children?: ReactNode;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  onClick?: () => void;
+  color?: string;
+  children?: React.ReactNode;
 }
 
 export function Button({
     onClick,
-    children
+    children,
+    color,
+    ...attributes
 }: ButtonProps) {
     return (
         <button 
-        className={"px-4 py-1 rounded border bg-white"}
+        className={`px-4 py-1 rounded border ${color ? `bg-${color}` : "bg-white"}`}
+        {...attributes}
         onClick={onClick}>{children}</button>
     )
 }

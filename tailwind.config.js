@@ -20,7 +20,7 @@ export default {
       purple: colors.violet,
       yellow: colors.amber,
       pink: colors.fuchsia,
-      red: "#FF0000",
+      red: "#FF3737",
       green: "#00DD40",
       greyText: "#7d7d7d",
       primary: "#BE6E46",
