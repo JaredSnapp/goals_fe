@@ -1,5 +1,6 @@
 import { RecruiterModel } from "../models/models";
 import { useEffect, useState } from "react";
+import { Card } from "../components/Card";
 
 interface RecruiterCardProps {
   onClick?: (recruiter: RecruiterModel) => void;
@@ -35,7 +36,8 @@ export function RecruiterCard({ recruiter, onClick }: RecruiterCardProps) {
   // min-w-72 max-w-96
   return (
     <>
-      <div className={"flex bg-white border min-w-72 max-w-96 rounded-xl w-100 cursor-pointer"} onClick={click}>
+    <Card className={"flex min-w-72 max-w-96 w-100 cursor-pointer"} onClick={click}>
+      {/* <div className={"flex bg-white shadow-md min-w-72 max-w-96 rounded-xl w-100 cursor-pointer"} onClick={click}> */}
         <div className={`${days > 7 ? 'bg-red' : 'bg-green'} w-2 rounded-tl-xl rounded-bl-xl`}></div>
         <div className={"p-2 px-3 w-full"}>
           <div className={"flex justify-between"}>
@@ -49,7 +51,8 @@ export function RecruiterCard({ recruiter, onClick }: RecruiterCardProps) {
             <p className={"content-center text-center text-balance"}>{recruiter?.status}</p>
           </div>
         </div>
-      </div>
+      {/* </div> */}
+      </Card>
     </>
   );
 }

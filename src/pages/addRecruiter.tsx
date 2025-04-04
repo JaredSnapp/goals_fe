@@ -3,6 +3,7 @@ import { RecruiterModel } from "../models/models";
 import { Button } from "../components/Button";
 
 import { useRecruiterApi } from "../hooks/useApi";
+import { Card } from "../components/Card";
 
 const {post: usePostRecruiters} = useRecruiterApi;
 
@@ -25,8 +26,7 @@ export function AddRecruiter() {
   const inputClassname = "m-1 p-1 mr-4 border rounded";
 
   return (
-    <>
-    <div className={"m-2 p-2 bg-white"}>
+    <Card className={"m-2 p-2"}>
       <h1>Add Recruiter</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -39,7 +39,6 @@ export function AddRecruiter() {
         <input aria-label="Date" type="date" className={"m-1 p-1 border rounded"} {...register("last_contact")}/>
         <Button type="submit" color="primary">Save</Button>
       </form>
-    </div>
-    </>
+    </Card>
   );
 }

@@ -1,4 +1,4 @@
-/* Quill specific styles */
+Quill specific styles
 .ql-toolbar.ql-snow {
     /* border: none !important; */
     margin-top: 1rem;
@@ -11,7 +11,7 @@
     border-radius: 0 0 4px 4px;
     min-height: 300px;
 }
-
+/* 
 .quill-editor {
     min-height: 300px;
 }
@@ -27,4 +27,11 @@
 .preview-section h2 {
     margin-top: 0;
     color: #333;
-}
+} */
+
+
+
+
+.tiptap-editor {
+    min-height: 300px;
+  }

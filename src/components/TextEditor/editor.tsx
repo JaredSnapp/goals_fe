@@ -49,8 +49,14 @@ const Editor = forwardRef(
       }
 
       quill.on(Quill.events.TEXT_CHANGE, (...args) => {
-        onTextChangeRef.current?.(...args);
+        // onTextChangeRef.current?.(...args);
+        onTextChangeRef.current?.(quill.getContents());
+
       });
+
+      // quill.on(Quill.events.EDITOR_CHANGE, (...args) => {
+      //   onTextChangeRef.current?.(...args);
+      // });
 
       quill.on(Quill.events.SELECTION_CHANGE, (...args) => {
         onSelectionChangeRef.current?.(...args);

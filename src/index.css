@@ -9,7 +9,8 @@
   font-weight: 400;
   margin: 0 !important;
   padding: 0;
-  background: #E5E5E5;
+  /* background: #E5E5E5; */
+  background: rgba(61, 37, 20, .05);
 
   /* color-scheme: light dark; */
   /* color: rgba(255, 255, 255, 0.87); */
